@@ -11,15 +11,15 @@ import retrofit2.http.*
 interface ApiInterface {
     @Headers("Accept: application/json")
     @POST("/api/v2/people/authenticate")
-    fun signInApi(@Body body: SignInRequestModel?): Call<SignInResponseModel?>?
+    fun signInApi(@Body body: SignInRequestModel?): Call<SignInResponseModel>?
 
     @Headers("Accept: application/json")
     @POST("/api/v2/people/create")
-    fun signUpApi(@Body body: SignUpRequestModel?): Call<SignUpResponseModel?>?
+    fun signUpApi(@Body body: SignUpRequestModel?): Call<SignUpResponseModel>?
 
     @Headers("Accept: application/json")
     @GET("/api/v2/people/me")
-    fun getMe(@Header("Authorization") authorization: String?): Call<GetMeResponse?>?
+    fun getMe(@Header("Authorization") authorization: String?): Call<GetMeResponse>?
 
     @Headers("Accept: application/json")
     @GET("/api/v2/vehicles")
